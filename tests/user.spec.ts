@@ -38,7 +38,7 @@ test('取得用戶資料', async ({ page, goto, network }) => {
       apiURL('/user'),
       ({ request }) => {
         return HttpResponse.json({
-          code: 0,
+          code: 200,
           data,
           message: '',
         })
@@ -59,7 +59,7 @@ test('新增 - 確認', async ({ page, goto, network }) => {
       apiURL('/user'),
       () => {
         return HttpResponse.json({
-          code: 0,
+          code: 200,
           data,
           message: '',
         })
@@ -81,7 +81,7 @@ test('新增 - 確認', async ({ page, goto, network }) => {
 
         data.push({ id, name, age })
         return HttpResponse.json({
-          code: 0,
+          code: 200,
           data: { id },
           message: '',
         })
@@ -110,7 +110,7 @@ test('新增 - 名字必填', async ({ page, goto, network }) => {
       apiURL('/user'),
       () => {
         return HttpResponse.json({
-          code: 0,
+          code: 200,
           data,
           message: '',
         })
@@ -133,7 +133,7 @@ test('新增 - 年齡必填', async ({ page, goto, network }) => {
       apiURL('/user'),
       () => {
         return HttpResponse.json({
-          code: 0,
+          code: 200,
           data,
           message: '',
         })
@@ -156,7 +156,7 @@ test('新增 - 年齡須為整數', async ({ page, goto, network }) => {
       apiURL('/user'),
       () => {
         return HttpResponse.json({
-          code: 0,
+          code: 200,
           data,
           message: '',
         })
@@ -180,7 +180,7 @@ test('新增 - 年齡需大於等於0', async ({ page, goto, network }) => {
       apiURL('/user'),
       () => {
         return HttpResponse.json({
-          code: 0,
+          code: 200,
           data,
           message: '',
         })
@@ -204,7 +204,7 @@ test('新增 - 取消', async ({ page, goto, network }) => {
       apiURL('/user'),
       () => {
         return HttpResponse.json({
-          code: 0,
+          code: 200,
           data,
           message: '',
         })
@@ -233,7 +233,7 @@ test('修改 - 確認', async ({ page, goto, network }) => {
       apiURL('/user'),
       () => {
         return HttpResponse.json({
-          code: 0,
+          code: 200,
           data,
           message: '',
         })
@@ -260,7 +260,7 @@ test('修改 - 確認', async ({ page, goto, network }) => {
 
         data[0] = { id, name, age }
         return HttpResponse.json({
-          code: 0,
+          code: 200,
           data: '',
           message: '',
         })
@@ -299,7 +299,7 @@ test('修改 - 驗證失敗', async ({ page, goto, network }) => {
       apiURL('/user'),
       () => {
         return HttpResponse.json({
-          code: 0,
+          code: 200,
           data,
           message: '',
         })
@@ -329,7 +329,7 @@ test('修改 - 取消', async ({ page, goto, network }) => {
       apiURL('/user'),
       () => {
         return HttpResponse.json({
-          code: 0,
+          code: 200,
           data,
           message: '',
         })
@@ -365,7 +365,7 @@ test('刪除 - 確認', async ({ page, goto, network }) => {
       apiURL('/user'),
       () => {
         return HttpResponse.json({
-          code: 0,
+          code: 200,
           data,
           message: '',
         })
@@ -379,7 +379,7 @@ test('刪除 - 確認', async ({ page, goto, network }) => {
       ({ request }) => {
         data.pop()
         return HttpResponse.json({
-          code: 0,
+          code: 200,
           data: '',
           message: '',
         })
@@ -414,7 +414,7 @@ test('刪除 - 取消', async ({ page, goto, network }) => {
       apiURL('/user'),
       () => {
         return HttpResponse.json({
-          code: 0,
+          code: 200,
           data,
           message: '',
         })

@@ -29,7 +29,7 @@ export const useAppStore = defineStore('app', () => {
       )
     )
     const parsed = schema.parse(response.data)
-    if (parsed.code !== 0) {
+    if (parsed.code !== 200) {
       alert('Please retry later...')
       throw Error('Something went wrong...')
     }
@@ -50,7 +50,7 @@ export const useAppStore = defineStore('app', () => {
       })
     )
     const parsed = schema.parse(response.data)
-    if (parsed.code !== 0) {
+    if (parsed.code !== 200) {
       alert('Please retry later...')
       throw Error('Something went wrong...')
     }
@@ -63,7 +63,7 @@ export const useAppStore = defineStore('app', () => {
 
     const schema = createResponseSchema(z.string())
     const parsed = schema.parse(response.data)
-    if (parsed.code !== 0) {
+    if (parsed.code !== 200) {
       alert('Please retry later...')
       throw Error('Something went wrong...')
     }
@@ -81,7 +81,7 @@ export const useAppStore = defineStore('app', () => {
 
     const schema = createResponseSchema(z.string())
     const parsed = schema.parse(response.data)
-    if (parsed.code !== 0) {
+    if (parsed.code !== 200) {
       alert('Please retry later...')
       throw Error('Something went wrong...')
     }
