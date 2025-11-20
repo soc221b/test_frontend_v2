@@ -261,7 +261,6 @@ test('修改 - 確認', async ({ page, goto, network }) => {
         data[0] = { id, name, age }
         return HttpResponse.json({
           code: 200,
-          data: '',
           message: '',
         })
       },
@@ -380,7 +379,6 @@ test('刪除 - 確認', async ({ page, goto, network }) => {
         data.pop()
         return HttpResponse.json({
           code: 200,
-          data: '',
           message: '',
         })
       },

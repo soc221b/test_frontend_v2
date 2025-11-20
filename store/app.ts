@@ -61,7 +61,7 @@ export const useAppStore = defineStore('app', () => {
   const put: (req: { id: number; name: string; age: number }) => Promise<void> = async (req) => {
     const response = await instance.put('/user', { id: req.id, name: req.name, age: req.age })
 
-    const schema = createResponseSchema(z.string())
+    const schema = createResponseSchema(z.undefined())
     const parsed = schema.parse(response.data)
     if (parsed.code !== 200) {
       alert('Please retry later...')
@@ -79,7 +79,7 @@ export const useAppStore = defineStore('app', () => {
   const remove: (req: { id: number }) => Promise<void> = async (req) => {
     const response = await instance.delete('/user', { data: { id: req.id } })
 
-    const schema = createResponseSchema(z.string())
+    const schema = createResponseSchema(z.undefined())
     const parsed = schema.parse(response.data)
     if (parsed.code !== 200) {
       alert('Please retry later...')
