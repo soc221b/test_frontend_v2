@@ -82,6 +82,7 @@ const handleSubmit = async () => {
   })
   model.value = cloneDeep(defaultModelValue)
   emit('success')
+  v$.value.$reset()
 }
 
 const handleCancel = () => {

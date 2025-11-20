@@ -54,5 +54,6 @@ const handleSubmit = async () => {
     age: parseInt(model.value.age, 10),
   })
   model.value = cloneDeep(defaultModelValue)
+  v$.value.$reset()
 }
 </script>
