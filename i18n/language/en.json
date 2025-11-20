@@ -1,4 +1,14 @@
 {
-  "welcome": "Welcome",
-  "test": "Test"
+  "operation": "Operation",
+  "name": "Name",
+  "age": "Age",
+  "create": "Create",
+  "edit": "Edit",
+  "delete": "Delete",
+  "confirm": "Confirm",
+  "cancel": "Cancel",
+  "are_you_sure": "Are you sure?",
+  "required": "Required",
+  "integer": "Should be integer",
+  "minValue": "Should be larger than or equal to {min}"
 }

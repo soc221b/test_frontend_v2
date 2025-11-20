@@ -1,4 +1,14 @@
 {
-  "welcome": "歡迎",
-  "test": "測試"
+  "operation": "操作",
+  "name": "名字",
+  "age": "年齡",
+  "create": "新增",
+  "edit": "修改",
+  "delete": "刪除",
+  "confirm": "確認",
+  "cancel": "取消",
+  "are_you_sure": "你確定嗎?",
+  "required": "必填",
+  "integer": "應為整數",
+  "minValue": "最小值應為 {min}"
 }

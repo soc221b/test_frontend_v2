@@ -1,17 +1,30 @@
 <template>
-  <div>
-    <label></label>
-    <input />
-  </div>
+  <label class="w-full">
+    {{ props.label }}
+    <br></br>
+    <input v-model="model" class="w-full" />
+  </label>
 </template>
 
 <script setup lang="ts">
 interface Props {
-  id?: string // 若使用者有輸入，以使用者輸入的為主，若沒有請產出一個唯一 ID
-  label?: string
+  label: string
+  modelValue: string
 }
-
 const props = withDefaults(defineProps<Props>(), {})
+
+const emit = defineEmits<{
+  'update:modelValue': [Props['modelValue']]
+}>()
+
+const model = computed({
+  get(): Props['modelValue'] {
+    return props.modelValue
+  },
+  set(modelValue: Props['modelValue']) {
+    emit('update:modelValue', modelValue)
+  },
+})
 </script>
 
 <style scoped lang="scss"></style>

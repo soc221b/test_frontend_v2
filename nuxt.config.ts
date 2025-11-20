@@ -91,4 +91,10 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/css/style.scss'],
+
+  runtimeConfig: {
+    public: {
+      apiBaseUrl: process.env.NUXT_PUBLIC_BASE_URL,
+    },
+  },
 })
