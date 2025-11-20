@@ -22,6 +22,9 @@ const props = withDefaults(defineProps<Props>(), {})
 
 <style scoped lang="scss">
 .e-btn {
+  &:hover,&:active {
+    @apply filter-brightness-90;
+  }
 
   // success 綠
   &-success {
