@@ -1,5 +1,30 @@
 # 前端面試測試
 
+## 執行方式
+
+```sh
+echo "NUXT_PUBLIC_API_BASE_URL=<string>" > .env
+pnpm i --frozen-lockfile
+pnpm run dev
+```
+
+## 測試方式
+
+因為沒有 mock server side request，請先將 callOne 改為 onBeforeMount
+
+```ts
+// await callOnce('load-users', appStore.load)
+onBeforeMount(() => {
+  appStore.load()
+})
+```
+
+```sh
+echo "NUXT_PUBLIC_API_BASE_URL=" > .env
+pnpm i --frozen-lockfile
+pnpm run test
+```
+
 **嚴格禁止往本倉庫發送PR**
 
 更新日期 2025/11/11
