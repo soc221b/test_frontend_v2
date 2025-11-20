@@ -16,7 +16,7 @@ export const useConfirm = () => {
     })
 
     const confirm = document.createElement('button')
-    confirm.textContent = t('Confirm')
+    confirm.textContent = t('confirm')
     confirm.addEventListener('click', (event) => {
       event.preventDefault()
       promise.resolve(true)
@@ -25,7 +25,7 @@ export const useConfirm = () => {
     dialog.append(confirm)
 
     const cancel = document.createElement('button')
-    cancel.textContent = t('Cancel')
+    cancel.textContent = t('cancel')
     cancel.type = 'button'
     cancel.autofocus = true
     cancel.addEventListener('click', () => {
